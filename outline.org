@@ -1,0 +1,12 @@
+* Hackday Metaprogramming II
+** Indept Review
+*** Singletons [[http://www.klankboomklang.com/2007/09/21/the-singleton-class/][Klag Boom Klang]]
+*** Metaclasses [[http://www.klankboomklang.com/2007/10/05/the-metaclass/][Klang Boom Klang]]
+*** Method Lookup [[http://www.klankboomklang.com/2007/09/14/method-dispatch/][Klang Boom Klang]]
+** Eval Methods [[http://github.com/fj/hack-day/blob/master/evals.md][Evals Notes]]
+*** instance_eval
+*** class_eval
+** Examples
+*** DSLs [[http://gist.github.com/255948][URL DSL]]
+*** Yehuda's method chain [[http://yehudakatz.com/2010/02/25/rubys-implementation-does-not-define-its-semantics/][1]] [[http://yehudakatz.com/2010/02/15/abstractqueryfactoryfactories-and-alias_method_chain-the-ruby-way][2]]
+*** Metaprogramming as a Refactoring - [[http://blog.jayfields.com/2006/09/ruby-instanceexec-aka-instanceeval.html][J Fields post]]
