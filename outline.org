@@ -8,13 +8,13 @@
 *** Method Lookup [[http://www.klankboomklang.com/2007/09/14/method-dispatch/][Klang Boom Klang]]
     Once an understanding of how singletons and metaclasses is present, understanding method lookup becomes a straightforward task comprised of following pointers.
 ** Eval Methods [[http://github.com/fj/hack-day/blob/master/evals.md][Evals Notes]]
-   At this point everyone should be awake. Everyone should also be up to speed with the basic object model implementation. From here we'll take a look at two methods that let you modify execution context and influence where mthod lookup starts from. The important summary of instance_eval and class_eval surrounds method definition in each case. We want to be sure to cover that and I've added some additional stuff to the notes that will help.'
+   At this point everyone should be awake. Everyone should also be up to speed with the basic object model implementation. From here we'll take a look at two methods that let you modify execution context and influence where method lookup starts from. The important summary of instance_eval and class_eval surrounds method definition in each case. We want to be sure to cover that and I've added some additional stuff to the notes that will help.
 *** instance_eval
 *** class_eval
 ** Examples
    The goal is to be 1/2 through the day here. We can take a break or keep going depending on how people feel. The next section will discuss real-world exmaples of metaprogramming via a grab-bag of pertinent examples. Two exmaple topics we thought were valuable and worth covering are DSL implemention and metaprogramming refactoring techniques.
 *** DSLs [[http://gist.github.com/255948][URL DSL]]
-    This is a small, compact examples of a URL DSL that uses method_missing, a technique discussed in MPHD1. We wanted to be sure to talk a little bit about when you choose to use a DSL and how you would go about building one using TDD.
+    This is a small, compact example of a URL DSL that uses method_missing, a technique discussed in MPHD1. We wanted to talk a little bit about when to use a DSL and how you would go about building one using TDD.
 *** Metaprogramming as a Refactoring - [[http://blog.jayfields.com/2006/09/ruby-instanceexec-aka-instanceeval.html][J Fields post]]
     This is a post that covers a very tricky metaprogramming refactoring that originally came from Refactoring, Ruby Ed. Simply understanding how this works means you are like a lvl 9 meta wizard. I thought it might be a good idea to explain it so we can up the ranks of our meta wizard army.
 *** Yehuda's method chain [[http://yehudakatz.com/2010/02/25/rubys-implementation-does-not-define-its-semantics/][1]] [[http://yehudakatz.com/2010/02/15/abstractqueryfactoryfactories-and-alias_method_chain-the-ruby-way][2]]
