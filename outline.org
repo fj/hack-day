@@ -1,12 +1,12 @@
 * Hackday Metaprogramming II
 ** Indepth Review
-   The purpose of the indepth review is to recap some of the core concepts we covered last time but to dig into them a little deeper and show examples that really help concretize the underlying object model concepts. We'll touch on some of the actual Ruby C code that implements part of the object model in order to clarify some of the more mytical innerworkings.'
+   The purpose of the indepth review is to recap some of the core concepts we covered last time but to dig into them a little deeper and show examples that really help concretize the underlying object model. We'll touch on some of the actual Ruby C code that implements part of the object model in order to clarify some of the more mytical innerworkings.
 *** Singletons [[http://www.klankboomklang.com/2007/09/21/the-singleton-class/][Klag Boom Klang]]
-    This post is a good place to start digging in. It covers what most people refer to as a "Metaclass" but uses strict terminology and C examples to explain what Singleton classes are and what their purpose is.
+    This post is a good place to jump in. It covers what most people refer to as a "Metaclass" but uses strict terminology and C examples to explain what Singleton classes are and what their purpose is.
 *** Metaclasses [[http://www.klankboomklang.com/2007/10/05/the-metaclass/][Klang Boom Klang]]
     This post clarifies the differences between Metaclasses and Singleton classes. It brings up an interesting design challenge imposed by class method inheritance and shows that Ruby uses its consistent method lookup rules to keep things simple.
 *** Method Lookup [[http://www.klankboomklang.com/2007/09/14/method-dispatch/][Klang Boom Klang]]
-    Once an understanding of how singletons and metaclasses are used understanding method lookup becomes a straightforward task comprised of following pointers.
+    Once an understanding of how singletons and metaclasses is present, understanding method lookup becomes a straightforward task comprised of following pointers.
 ** Eval Methods [[http://github.com/fj/hack-day/blob/master/evals.md][Evals Notes]]
    At this point everyone should be awake. Everyone should also be up to speed with the basic object model implementation. From here we'll take a look at two methods that let you modify execution context and influence where mthod lookup starts from. The important summary of instance_eval and class_eval surrounds method definition in each case. We want to be sure to cover that and I've added some additional stuff to the notes that will help.'
 *** instance_eval
