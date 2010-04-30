@@ -77,8 +77,8 @@ We are simply opening up the class, just like the Ruby keyword 'class' does, and
 
 Knowing what instance_eval and class_eval do in respect to the objects receiving them, we can now understand the following:
 
-class Person
-end
+    class Person
+    end
 
-Person.instance_eval { def hi;end }  # creates a class method
-Person.class_eval { def hi;end } # creates an instance method
+    Person.instance_eval { def hi;end }  # creates a class method
+    Person.class_eval { def hi;end } # creates an instance method
