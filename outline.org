@@ -1,12 +1,21 @@
 * Hackday Metaprogramming II
-** Indept Review
+** Indepth Review
+   The purpose of the indepth review is to recap some of the core concepts we covered last time but to dig into them a little deeper and show examples that really help concretize the underlying object model concepts. We'll touch on some of the actual Ruby C code that implements part of the object model in order to clarify some of the more mytical innerworkings.'
 *** Singletons [[http://www.klankboomklang.com/2007/09/21/the-singleton-class/][Klag Boom Klang]]
+    This post is a good place to start digging in. It covers what most people refer to as a "Metaclass" but uses strict terminology and C examples to explain what Singleton classes are and what their purpose is.
 *** Metaclasses [[http://www.klankboomklang.com/2007/10/05/the-metaclass/][Klang Boom Klang]]
+    This post clarifies the differences between Metaclasses and Singleton classes. It brings up an interesting design challenge imposed by class method inheritance and shows that Ruby uses its consistent method lookup rules to keep things simple.
 *** Method Lookup [[http://www.klankboomklang.com/2007/09/14/method-dispatch/][Klang Boom Klang]]
+    Once an understanding of how singletons and metaclasses are used understanding method lookup becomes a straightforward task comprised of following pointers.
 ** Eval Methods [[http://github.com/fj/hack-day/blob/master/evals.md][Evals Notes]]
+   At this point everyone should be awake. Everyone should also be up to speed with the basic object model implementation. From here we'll take a look at two methods that let you modify execution context and influence where mthod lookup starts from. The important summary of instance_eval and class_eval surrounds method definition in each case. We want to be sure to cover that and I've added some additional stuff to the notes that will help.'
 *** instance_eval
 *** class_eval
 ** Examples
+   The goal is to be 1/2 through the day here. We can take a break or keep going depending on how people feel. The next section will discuss real-world exmaples of metaprogramming via a grab-bag of pertinent examples. Two exmaple topics we thought were valuable and worth covering are DSL implemention and metaprogramming refactoring techniques.
 *** DSLs [[http://gist.github.com/255948][URL DSL]]
-*** Yehuda's method chain [[http://yehudakatz.com/2010/02/25/rubys-implementation-does-not-define-its-semantics/][1]] [[http://yehudakatz.com/2010/02/15/abstractqueryfactoryfactories-and-alias_method_chain-the-ruby-way][2]]
+    This is a small, compact examples of a URL DSL that uses method_missing, a technique discussed in MPHD1. We wanted to be sure to talk a little bit about when you choose to use a DSL and how you would go about building one using TDD.
 *** Metaprogramming as a Refactoring - [[http://blog.jayfields.com/2006/09/ruby-instanceexec-aka-instanceeval.html][J Fields post]]
+    This is a post that covers a very tricky metaprogramming refactoring that originally came from Refactoring, Ruby Ed. Simply understanding how this works means you are like a lvl 9 meta wizard. I thought it might be a good idea to explain it so we can up the ranks of our meta wizard army.
+*** Yehuda's method chain [[http://yehudakatz.com/2010/02/25/rubys-implementation-does-not-define-its-semantics/][1]] [[http://yehudakatz.com/2010/02/15/abstractqueryfactoryfactories-and-alias_method_chain-the-ruby-way][2]]
+    This is a design pattern that relies heavily on the object model and its features. Understanding this particular pattern would be nice because it is slathered all over the guts of Rails3 and will no doubt find its way into many a Rails3 plugin.
