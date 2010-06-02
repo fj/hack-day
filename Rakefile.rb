@@ -23,14 +23,15 @@ namespace :ponder do
     Spec::Rake::SpecTask.new("_koans") do |t|
       t.spec_files = FileList['**/koans/**/*-spec.rb']
       spec_helper = File.expand_path("koans/spec-helper.rb")
-      Guru.new.admonish("you cannot ponder unless you wander") unless File.exists?(spec_helper)
+      raise Guru.new.admonish("you cannot ponder unless you wander") unless File.exists?(spec_helper)
       t.spec_opts = ["--require", spec_helper, "--color", "--backtrace", "--format", "specdoc"]
     end
     begin
       Rake.application["_koans"].invoke
     rescue
-      Guru.new.impart("even a river's journey begins as a single drop")
+      raise Guru.new.impart("mountains are merely mountains")
     end
+    Guru.new.intone("mountains are again merely mountains")
   end
 end
 
@@ -38,7 +39,7 @@ class Guru
   @name = "the metaprogramming guru"
 
   def initialize(fname = "wisdom.txt")
-    admonish("a journey cannot begin without the beginning") unless File.exists?(fname)
+    raise admonish("a journey cannot begin without the beginning") unless File.exists?(fname)
     f = File.new(fname)
     @quotes = f.readlines.map { |line|
       record = line.chomp.split("|")
@@ -58,7 +59,7 @@ class Guru
   def impart(wisdom)
     wisdom = wisdom.capitalize << '.'
     s = decorate wisdom, @name
-    raise s.join("\n")
+    s.join("\n")
   end
   
   def admonish(words)
@@ -67,7 +68,7 @@ class Guru
     words = "#{words} #{error}"
     
     s = decorate words, @name, {:h => 1, :v => 1, :s => ' ', :e => '!'}
-    raise s.join("\n")
+    s.join("\n")
   end
   
   private
