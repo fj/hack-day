@@ -21,8 +21,8 @@ namespace :ponder do
   desc "Meditate until enlightenment is achieved. [Run unit tests.]"
   task :koans => :meditate do
     Spec::Rake::SpecTask.new("_koans") do |t|
-      t.spec_files = FileList['**/examples/**/*-spec.rb']
-      spec_helper = File.expand_path("examples/spec-helper.rb")
+      t.spec_files = FileList['**/koans/**/*-spec.rb']
+      spec_helper = File.expand_path("koans/spec-helper.rb")
       Guru.new.admonish("you cannot ponder unless you wander") unless File.exists?(spec_helper)
       t.spec_opts = ["--require", spec_helper, "--color", "--backtrace", "--format", "specdoc"]
     end
