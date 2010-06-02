@@ -20,7 +20,7 @@ We will have three sessions of about forty-five to fifty minutes each.
 
 * Session one: First, a review of the Ruby object model. It's important to have a solid understanding of this before you go onto the other parts, because without a working mental understanding of how the pieces fit together, it will be too difficult to mentally evaluate your programs. We'll also develop a unit-testing suite that we can use to verify and prove our understanding of how Ruby works under the covers.
 
-* Session two: Next we'll explore the use cases of two of the most challenging tricks in your metaprogramming bag: `instance_eval` and `class_eval`, each of which offers the potential t
+* Session two: Next we'll explore the use cases of two of the most challenging tricks in your metaprogramming bag: `instance_eval` and `class_eval`, each of which offers the potential to considerably brighten your life.
 
 * Session three: Using the previous two sessions, we'll approach metaprogramming as simply a logical extension of refactoring. Finally, we'll wrap up with a from-scratch demo of a practical (but tiny) project that uses metaprogramming as its core rather than merely a refactoring. Revel in your newfound skills, but remember: with great power comes great responsibility.
 
@@ -51,9 +51,11 @@ Afterwards, the plan is to head out to lunch as a group somewhere locally.
   - "right then up" MRO rule
   - how proxy classes work in MRO
   
-* Scope rules
+* Scope rules and scope gates
 
 * [eigen/meta|super]classes and their relationship to each other
+
+* Putting it all together
 
 * Grand unified theory of the Ruby object model:
   - [objects] all objects (Employee, String, Class, etc.) are of a single kind (Object)
