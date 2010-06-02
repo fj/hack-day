@@ -31,7 +31,7 @@ namespace :ponder do
     rescue
       raise Guru.new.impart("mountains are merely mountains")
     end
-    Guru.new.intone("mountains are again merely mountains")
+    Guru.new.impart("mountains are again merely mountains")
   end
 end
 
